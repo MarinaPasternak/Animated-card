@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+body{
+    font-family: 'New Tegomin', serif;
+}
+
+.main{
+    background: linear-gradient( rgba(34, 101, 163, .5), rgba(103, 0, 31, .8)); 
+    background-size: cover;
+    height: 900px;
+    width: 900px;
+    margin: auto;
+}
+
+.top{
+    background-image: url(sunset-set/back-top.png);
+    background-size: 156%;
+    width: 100%;
+    height: 74%;
+    background-position: center;
+}
+
+.container {
+    width:60%;
+    height:60%;
+    
+}
+
+.bottom{
+    width: 100%;
+    height: 27%;
+    background-image: url(sunset-set/back-bottom.png);
+    background-size: 106%;
+    background-position: center;
+}
+
+
+.island{
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+    position: relative;
+    bottom: -18px;
+}
+
+
+.stars{
+    width: 100%;
+    animation: pulsing 7s infinite;
+    opacity: 1;
+}
+  
+  @keyframes pulsing {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+  .star-fall-1{
+    position: relative;
+    top: -140px;
+    height: 50px;
+    animation: moving-stars-1 7s infinite;
+    z-index: 1;
+    opacity: 0;
+    transform: translate(348px, 17px);
+  }
+  
+  @keyframes moving-stars-1 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        transform: translate(377px, 46px);
+    }
+  }
+
+  .star-fall-2{
+    position: relative;
+    top: -140px;
+    opacity: 0;
+    height: 50px;
+    animation: moving-stars-2 7s infinite;
+    z-index: 1;
+    transform: translate(0px, 17px);
+  }
+  
+  @keyframes moving-stars-2 {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+        transform: translate(50px, 46px);
+    }
+  }
+
+
+.tree{
+    position: relative;
+    bottom: 615px;
+    z-index: 3;
+}
+
+.bash1, .bash2{
+    position: relative;
+    bottom: 623px;
+    z-index: 3;
+    left: -317px;
+}
+
+.bash2{
+    height: 90px;
+}
+
+.coconut{
+    position: relative;
+    z-index: 4;
+    top: -876px;
+    left: -430px;
+    animation-name: grow, fall;
+    animation-duration: 6s, 2s;
+    animation-delay: 6s, 10s;
+    transform: scale(0.0, 0.0);
+}
+
+  @keyframes grow {
+    0% {
+        transform: scale(0, 0)
+      }
+      50% {
+        transform: scale(0.5, 0.5);
+      }
+      100% {
+        transform: scale(1.0, 1.0);
+        
+      }
+  }
+
+  @keyframes fall {
+    100% {
+        top: -626px;
+        z-index: 2;
+    }
+  }
+
+
+  .group{
+    position: relative;
+    bottom: 639px;
+  }
+
+  .ocean{
+    width: 100%;
+    position: relative;
+    bottom: 210px;
+  }
+
+  .shine-ocean{
+    animation: ocean 10s infinite;
+  }
+
+  @keyframes ocean {
+    0% {
+        opacity: 0.1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    60% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 0;
+    }
+  }
+
+  .sun{
+    position: relative;
+    top: 330px;
+    left: -21px;
+    z-index: 2;
+  }
+
+  .sun-shine{
+    position: relative;
+    z-index: 1;
+    top: 350px;
+    left: 82px;
+    animation: shine 10s infinite;
+  }
+
+  @keyframes shine {
+    0% {
+        transform: scale(0, 0)
+      }
+      50% {
+        transform: scale(1.5, 1.5);
+      }
+      70% {
+        transform: scale(2.0, 2.0);
+        
+      }
+      90% {
+        transform: scale(1.5, 1.5);
+      }
+      100% {
+        transform: scale(1.0, 1.0);
+        
+      }
+
+  }
+
+
+  .text
+  {
+    text-shadow: 1px 1px 2px black, 0 0 1em red;
+    width: fit-content;
+    position: relative;
+    top: 110px;
+    left: 42%;
+    font-size: 18pt;
+  }
+
+
+  .bird2{
+    animation: drawArc 10s infinite linear;
+  }
+
+  @keyframes drawArc {
+    0% { transform: rotate(0deg) translateX(150px) rotate(0deg) ;}
+    100%{ transform: rotate(-180deg) translateX(150px) rotate(180deg);  }
+}
+
+.bird4{
+    animation: drawArc2 10s infinite linear;
+  }
+
+  @keyframes drawArc2 {
+    0% {  transform: rotate(-180deg) translateX(100px) rotate(180deg); }
+    100%{ transform: rotate(0deg) translateX(150px) rotate(0deg) ;  }
+}
+
+.bird1{
+    position: relative;
+   
+    animation: move-diagon 10s infinite linear;
+  }
+
+  @keyframes move-diagon {
+    0% {
+        transform: translate3d(200px, 200px, 0);
+       
+    }
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.bird3{
+    animation: move-line 13s infinite linear;
+}
+
+@keyframes move-line {
+    0% {
+        transform: translateX(200px);
+       
+    }
+    100% {
+        transform: translateX(-300px);
+    }
+  }
+
+  .ship{
+    position: relative;
+    bottom: 500px;
+    left: 615px;
+    animation: rot 20s infinite linear;
+  }
+
+  @keyframes rot {
+    from {
+            transform: rotate(0deg)
+                       translate(30px)
+                       rotate(0deg);
+    }
+    to {
+            transform: rotate(360deg)
+                       translate(30px)
+                       rotate(-360deg);
+    }
+}
